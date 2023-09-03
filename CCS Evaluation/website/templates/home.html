@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link
+    rel="stylesheet"
+    href="../static/styles/navbar.css"
+  />
+  <link
+    rel="stylesheet"
+    href="../static/styles/home.css"
+  />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".notification .notif-button").click(function(){
+        $(this).parent().toggleClass("active");
+        $(".profile").removeClass("active");
+      });
+
+      $(".profile .profile-button").click(function(){
+        $(this).parent().toggleClass("active");
+        $(".notification").removeClass("active");
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="/"><img src="../static/images/logo.png" alt="logo"></a>
+    </div>
+    <div class="nav-links">
+      <ul class="nav-buttons">
+        <li><a href="/">Home</a></li>
+        <li><a href="/evaluation">Evaluation</a></li>
+      </ul>
+    </div>
+    <div class="notification">
+      <div class="notif-button">
+        <img src="../static/images/notification.png" alt="notif">
+      </div>
+      <div class="notif-box">
+        <div class="notif-details">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <p>Laudantium minus consectetur facilis cum quas ratione ipsum, </p>
+          <p>natus reiciendis similique rerum sapiente, ad velit unde excepturi,</p>
+          <p> temporibus optio consequuntur nemo at?</p>
+        </div>
+      </div>
+    </div>
+    <div class="profile">
+      <div class="profile-button">
+        <img src="../static/images/default.jpg" alt="pfp">
+      </div>
+      <div class="profile-box">
+        <li><h1>Patrick Mallari</h1></li>
+        <li><a href="/profile">My Profile</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <a href="/notifications">
+      <div class="notification-box">
+        <div class="notif-desc">
+          <div class="notif-icon">
+            <img src="../static/images/icons/notification.png" alt="notification">
+          </div>
+          <h1>NOTIFICATIONS</h1>
+        </div>
+      </div>
+    </a>
+    <div class="vertical">
+      <a href="/evaluation">
+        <div class="evaluation-box">
+          <div class="eval-desc">
+            <div class="eval-icon">
+              <img src="../static/images/icons/evaluation.png" alt="notification">
+            </div>
+            <h1>EVALUATION</h1>
+          </div>
+        </div>
+      </a>
+      <div class="vertical-horizontal">
+        <a href="/profile">
+          <div class="user-box">
+            <div class="user-desc">
+              <div class="user-icon">
+                <img src="../static/images/icons/user.png" alt="notification">
+              </div>
+              <h1>USER</h1>
+            </div>
+          </div>
+        </a>
+        <a href="/logout">
+          <div class="logout-box">
+            <div class="logout-desc">
+              <div class="logout-icon">
+                <img src="../static/images/icons/logout.png" alt="notification">
+              </div>
+              <h1>LOGOUT</h1>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="calendar">
+      <img src="../static/images/calendar.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
